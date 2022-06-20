@@ -1,0 +1,27 @@
+To process the data from the collections Stream api gives various methods & defines 
+mechanisms 
+	There are two mechanisms by which we can process the data
+		1. filter :
+		2. map :  is transform(meant collect each value/object from the stream apply some operations and push it into other collection) 
+		
+		stream() : sequential stream
+		parallel() OR parallelStream() : When a stream execute in parallel, the JR divides
+		stream into sub multiple streams.
+		The aggregate operations iterate over and process these sub streams in 
+		parallel and then combine the result.
+		
+		
+		* FlatMap : If you process a complex data collection then we should go for flatMap.
+					It returns each stream(It means a group of objects) and finally we collect them into one collection.
+ 					while normal map return one object 	
+ 					
+ 		* Difference between map & flatMap 
+ 			map(func) takes one input apply some function and return one/single object(One To One)
+ 			flatMap(func)takes one input apply some function and return stream of objects (One To Many)	
+ 			
+ 		* What is the 
+ 			1. terminal (filter() , map(), distinct(), limit()) : It returns stream of objects.
+ 			2. Non terminal methods (toList() , collect(), toArray() , min(), max(), count(), forEach())
+ 				And on that returned stream we apply non terminal operations like			
+ 			
+ 			
